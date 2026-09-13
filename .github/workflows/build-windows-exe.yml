@@ -8,7 +8,7 @@ on:
 env:
   LADYBIRD_SOURCE_DIR: ${{ github.workspace }}
   CCACHE_DIR: ${{ github.workspace }}/.ccache
-  VCPKG_ROOT: ${{ github.workspace }}/Build/vcpkg
+  VCPKG_ROOT: ${{ github.workspace }}/Build/vcpkg-release
   CCACHE_COMPILERCHECK: "%compiler% -v"
 
 jobs:
