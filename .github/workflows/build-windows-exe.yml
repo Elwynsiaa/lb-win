@@ -153,7 +153,6 @@ jobs:
       - name: Save Caches
         uses: ./.github/actions/cache-save
         with:
-          runner_labels: '["windows-latest"]'
           arch: 'x86_64'
           ccache_path: ${{ env.CCACHE_DIR }}
           ccache_primary_key: ${{ steps.cache-restore.outputs.ccache_primary_key }}
