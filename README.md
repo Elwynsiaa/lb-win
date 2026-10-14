@@ -21,7 +21,7 @@ These builds are compiled directly from the upstream `master` branch using GitHu
 ## ⬇️ Downloads
 
 You can download the packaged `.zip` builds directly via:
-* **Web UI:** [elwynsiaa.github.io/ladybird-windows-autobuild](https://elwynsiaa.github.io/ladybird-windows-autobuild/)
+* **Web UI:** [elwynsiaa.github.io/ladybird-windows-autobuild](https://elwynsiaa.github.io/lb-win/)
 * **GitHub Releases:** **[Releases](../../releases)** page
 
 ### Build Details
@@ -32,7 +32,7 @@ You can download the packaged `.zip` builds directly via:
 
 ## 🚀 Getting Started
 
-1. Download `Ladybird-Windows-Release.zip` from the [Web Directory](https://elwynsiaa.github.io/ladybird-windows-autobuild/) or [Releases](../../releases).
+1. Download `Ladybird-Windows-Release.zip` from the [Web Directory](https://elwynsiaa.github.io/lb-win/) or [Releases](../../releases).
 2. Extract the `.zip` archive to a folder on your PC.
 3. Open the extracted folder and launch `bin/Ladybird.exe`.
 
