@@ -46,13 +46,12 @@ jobs:
         uses: ./.github/actions/cache-restore
         id: 'cache-restore'
         with:
-          runner_labels: '["windows-latest"]'
           os: 'Windows'
           arch: 'x86_64'
           toolchain: 'ClangCL'
           cache_key_extra: 'Windows_CI'
           ccache_path: ${{ env.CCACHE_DIR }}
-          download_cache_path: ${{ github.workspace }}/Build/caches
+          sccache_path: ${{ github.workspace }}/.sccache
           vcpkg_cache_path: ${{ github.workspace }}/Build/caches/vcpkg-binary-cache
 
       - name: Configure CMake
@@ -156,5 +155,7 @@ jobs:
           arch: 'x86_64'
           ccache_path: ${{ env.CCACHE_DIR }}
           ccache_primary_key: ${{ steps.cache-restore.outputs.ccache_primary_key }}
+          sccache_path: ${{ github.workspace }}/.sccache
+          sccache_primary_key: ${{ steps.cache-restore.outputs.sccache_primary_key }}
           vcpkg_cache_path: ${{ github.workspace }}/Build/caches/vcpkg-binary-cache
           vcpkg_cache_primary_key: ${{ steps.cache-restore.outputs.vcpkg_cache_primary_key }}
