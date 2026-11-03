@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="google-site-verification" content="Ko_1AV9Uld4Tw0T6KUYuHuQYZT36IJ2EnCejPysSbpw" />
+
     <meta name="description" content="Download experimental native Windows (.exe) builds of the Ladybird web browser. Automated weekly releases from the Ladybird master branch.">
     <meta name="keywords" content="Ladybird browser, Ladybird Windows, Ladybird .exe, Ladybird native build, Ladybird download Windows, Ladybird autobuild">
     <meta name="author" content="Elwynsiaa">
@@ -38,21 +41,43 @@
         These weekly builds are compiled directly from the upstream master branch using GitHub Actions.
     </p>
 
-    <img src="https://github.com/user-attachments/assets/62e81356-e483-4fdd-8548-4d6499b252e9" alt="Ladybird Browser running on Windows native build" class="hero-image">
+    <img src="https://github.com/user-attachments/assets/62e81356-e483-4fdd-8548-4d6499b252e9" alt="Ladybird Browser running natively on Windows 11" class="hero-image">
     
     <div class="warning">
-        <strong>⚠️ Warning:</strong> These are automated native Windows builds tracking the Ladybird `master` branch. As native Windows support is highly experimental, <strong>most builds are expected not to work or may crash.</strong>
+        <strong>⚠️ Warning:</strong> These are automated native Windows builds tracking the Ladybird `master` branch. As native Windows support is experimental, <strong>most builds are expected not to work or may crash.</strong>
     </div>
+
+    <!-- SEO Fallback: If Googlebot skips the JS, it still sees this direct link -->
+    <noscript>
+        <p>JavaScript is disabled or you are a search crawler. You can <a href="https://github.com/Elwynsiaa/lb-win/releases">download the latest Ladybird Windows releases directly from our GitHub page here</a>.</p>
+    </noscript>
 
     <div id="releases-container">Loading latest Ladybird Windows releases...</div>
 
+    <!-- SEO Content Section -->
+    <div style="margin-top: 40px; border-top: 1px solid #30363d; padding-top: 20px;">
+        <h2>About Ladybird for Windows</h2>
+        <p>
+            <strong>Ladybird</strong> is a brand-new, independent web browser built from scratch in C++ and Rust. 
+            While official support is currently focused on Linux and macOS, this project automatically builds the 
+            experimental <strong>Ladybird native Windows port</strong> every week. 
+        </p>
+        <h3>How to install Ladybird on Windows:</h3>
+        <ol>
+            <li>Download the latest <code>Ladybird-Windows-Release.zip</code> from the links above.</li>
+            <li>Extract the entire folder to your Desktop or Downloads folder.</li>
+            <li>Make sure you have the <a href="https://aka.ms/vs/17/release/vc_redist.x64.exe">Microsoft Visual C++ Redistributable</a> installed.</li>
+            <li>Run <code>Ladybird.exe</code> inside the extracted <code>bin</code> folder!</li>
+        </ol>
+    </div>
+
     <script>
         const repo = 'Elwynsiaa/lb-win'; 
-        
         const apiUrl = `https://api.github.com/repos/${repo}/releases`;
         const container = document.getElementById('releases-container');
 
-        const knownWorkingBuildTag = "20260403"; 
+        // I updated this to highlight your recent successful 20261101 build!
+        const knownWorkingBuildTag = "20261101"; 
 
         async function fetchReleases() {
             try {
