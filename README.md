@@ -1,15 +1,15 @@
 # Ladybird Windows Autobuilds
 
-[![Build win32 (.exe)](https://github.com/Elwynsiaa/ladybird-windows-autobuild/actions/workflows/build-windows-exe.yml/badge.svg)](https://github.com/Elwynsiaa/ladybird-windows-autobuild/actions/workflows/build-windows-exe.yml)
-[![Latest Release](https://img.shields.io/github/v/release/Elwynsiaa/ladybird-windows-autobuild?include_prereleases&color=blue&label=latest%20build)](https://github.com/Elwynsiaa/ladybird-windows-autobuild/releases)
-[![Web Directory](https://img.shields.io/badge/Website-GitHub%20Pages-181717?logo=github&logoColor=white)](https://elwynsiaa.github.io/ladybird-windows-autobuild/)
+[![Build win32 (.exe)](https://github.com/Elwynsiaa/lb-win/actions/workflows/build-windows-exe.yml/badge.svg)](https://github.com/Elwynsiaa/lb-win/actions/workflows/build-windows-exe.yml)
+[![Latest Release](https://img.shields.io/github/v/release/Elwynsiaa/lb-win?include_prereleases&color=blue&label=latest%20build)](https://github.com/Elwynsiaa/lb-win/releases)
+[![Web Directory](https://img.shields.io/badge/Website-GitHub%20Pages-181717?logo=github&logoColor=white)](https://elwynsiaa.github.io/lb-win/)
 [![Upstream](https://img.shields.io/badge/Upstream-LadybirdBrowser%2Fladybird-ff69b4)](https://github.com/LadybirdBrowser/ladybird)
 
 Unofficial repository providing **automated native Windows (`x86_64`) binaries** for the [Ladybird](https://github.com/LadybirdBrowser/ladybird) web browser. 
 
 These builds are compiled directly from the upstream `master` branch using GitHub Actions on a weekly schedule.
 
-🌐 **Browse and download builds online:** [https://elwynsiaa.github.io/ladybird-windows-autobuild/](https://elwynsiaa.github.io/ladybird-windows-autobuild/)
+🌐 **Browse and download builds online:** [https://elwynsiaa.github.io/lb-win/](https://elwynsiaa.github.io/lb-win/)
 
 ---
 
@@ -21,7 +21,7 @@ These builds are compiled directly from the upstream `master` branch using GitHu
 ## ⬇️ Downloads
 
 You can download the packaged `.zip` builds directly via:
-* **Web UI:** [elwynsiaa.github.io/ladybird-windows-autobuild](https://elwynsiaa.github.io/lb-win/)
+* **Web UI:** [elwynsiaa.github.io/lb-win](https://elwynsiaa.github.io/lb-win/)
 * **GitHub Releases:** **[Releases](../../releases)** page
 
 ### Build Details
