@@ -123,8 +123,13 @@
                     `;
                     container.appendChild(releaseDiv);
                 });
-            } catch (error) {
-                container.innerHTML = `<p style="color: #f85149;">Error loading releases: ${error.message}</p>`;
+                } catch (error) {
+                container.innerHTML = `
+                    <p style="color: #8b949e;"><em>Automatic release list temporarily unavailable (GitHub API limit).</em></p>
+                    <a href="https://github.com/${repo}/releases" class="download-btn" style="background: #238636;">
+                        📦 View All Releases on GitHub
+                    </a>
+                `;
             }
         }
 
