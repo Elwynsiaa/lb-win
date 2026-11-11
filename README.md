@@ -1,11 +1,11 @@
-# Ladybird Windows Autobuilds
+# LB-Win: Unofficial Windows Builds
 
 [![Build win32 (.exe)](https://github.com/Elwynsiaa/lb-win/actions/workflows/build-windows-exe.yml/badge.svg)](https://github.com/Elwynsiaa/lb-win/actions/workflows/build-windows-exe.yml)
 [![Latest Release](https://img.shields.io/github/v/release/Elwynsiaa/lb-win?include_prereleases&color=blue&label=latest%20build)](https://github.com/Elwynsiaa/lb-win/releases)
 [![Web Directory](https://img.shields.io/badge/Website-GitHub%20Pages-181717?logo=github&logoColor=white)](https://elwynsiaa.github.io/lb-win/)
 [![Upstream](https://img.shields.io/badge/Upstream-LadybirdBrowser%2Fladybird-ff69b4)](https://github.com/LadybirdBrowser/ladybird)
 
-Unofficial repository providing **automated native Windows (`x86_64`) binaries** for the [Ladybird](https://github.com/LadybirdBrowser/ladybird) web browser. 
+Unofficial repository providing **automated native Windows (`x86_64`) binaries** based on the [Ladybird](https://github.com/LadybirdBrowser/ladybird) web browser engine. 
 
 These builds are compiled directly from the upstream `master` branch using GitHub Actions on a weekly schedule.
 
@@ -14,7 +14,7 @@ These builds are compiled directly from the upstream `master` branch using GitHu
 ---
 
 > [!WARNING]
-> **Experimental Builds:** Native Windows support in Ladybird is in early and active development. These builds track the bleeding-edge upstream `master` branch. **Most builds are expected to be unstable, incomplete, or may crash unexpectedly.** Use strictly for testing and experimentation.
+> **Experimental Builds:** Native Windows support is in early and active development. These builds track the bleeding-edge upstream `master` branch. **Most builds are expected to be unstable, incomplete, or may crash unexpectedly.** Use strictly for testing and experimentation.
 
 ---
 
@@ -49,9 +49,10 @@ The workflow automatically compiles the browser directly from source using GitHu
 
 ---
 
-## ⚖️ Disclaimer
+## ⚖️ Trademark & Disclaimer
 
-This is an **unofficial community project** and is **not affiliated with, endorsed by, or maintained by the Ladybird Browser project or its core developers**. 
+**LB-Win is an unofficial community project and is not affiliated with, endorsed by, or maintained by the Ladybird project or its core developers.** 
 
-* For bug reports and issues with the official browser, visit the official repository: [LadybirdBrowser/ladybird](https://github.com/LadybirdBrowser/ladybird).
-* Please do not submit bug reports to upstream regarding broken Windows builds unless you are actively contributing to native Windows support fixes.
+* "Ladybird" is a trademark of the Ladybird project. 
+* This repository exists solely to provide experimental Windows compilation targets based on their open-source code.
+* Please **do not** submit bug reports to upstream regarding broken Windows builds unless you are actively contributing to native Windows support fixes. For bugs related to official components, visit [LadybirdBrowser/ladybird](https://github.com/LadybirdBrowser/ladybird).

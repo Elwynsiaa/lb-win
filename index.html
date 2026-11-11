@@ -8,23 +8,23 @@
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
-      "name": "Ladybird Windows Autobuilds",
-      "alternateName": ["lb-win", "Ladybird Windows"],
+      "name": "LB-Win Autobuilds",
+      "alternateName": ["lb-win", "Unofficial Ladybird Windows"],
       "url": "https://elwynsiaa.github.io/lb-win/"
     }
     </script>
     
     <meta name="google-site-verification" content="Ko_1AV9Uld4Tw0T6KUYuHuQYZT36IJ2EnCejPysSbpw" />
 
-    <meta name="description" content="Download experimental native Windows (.exe) builds of the Ladybird web browser. Automated weekly releases from the Ladybird master branch.">
-    <meta name="keywords" content="Ladybird browser, Ladybird Windows, Ladybird .exe, Ladybird native build, Ladybird download Windows, Ladybird autobuild">
+    <meta name="description" content="Download experimental, unofficial native Windows (.exe) builds based on the Ladybird web browser engine. Automated weekly releases from the master branch.">
+    <meta name="keywords" content="Ladybird browser, Ladybird Windows, Ladybird .exe, Ladybird native build, Ladybird download Windows, Ladybird autobuild, LB-Win">
     <meta name="author" content="Elwynsiaa">
-    <meta property="og:title" content="Ladybird Browser - Windows Autobuilds">
-    <meta property="og:description" content="Download experimental native Windows (.exe) builds of the Ladybird web browser.">
+    <meta property="og:title" content="LB-Win: Unofficial Windows Builds">
+    <meta property="og:description" content="Download experimental, unofficial native Windows (.exe) builds based on the Ladybird web browser engine.">
     <meta property="og:image" content="https://github.com/user-attachments/assets/62e81356-e483-4fdd-8548-4d6499b252e9">
     <meta property="og:type" content="website">
 
-    <title>Ladybird Browser - Native Windows Autobuilds</title>
+    <title>LB-Win: Unofficial Windows Builds (Based on Ladybird)</title>
     
     <style>
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: #0d1117; color: #c9d1d9; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.5; }
@@ -41,38 +41,35 @@
         .warning { background: #3b2300; border: 1px solid #f0b32f; color: #e3b341; padding: 15px; border-radius: 6px; margin-bottom: 25px; }
         a { color: #58a6ff; text-decoration: none; }
         a:hover { text-decoration: underline; }
+        .disclaimer { margin-top: 40px; border-top: 1px solid #30363d; padding-top: 20px; font-size: 0.9em; color: #8b949e; }
     </style>
 </head>
 <body>
-    <h1>Ladybird Windows Autobuilds</h1>
+    <h1>LB-Win Autobuilds</h1>
     
     <p class="seo-text">
-        Unofficial repository providing automated native Windows (.exe) binaries for the <a href="https://ladybird.dev/" target="_blank">Ladybird web browser</a>. 
+        Unofficial community repository providing automated native Windows (.exe) binaries based on the <a href="https://ladybird.dev/" target="_blank">Ladybird web browser</a> engine. 
         These weekly builds are compiled directly from the upstream master branch using GitHub Actions.
     </p>
 
-    <img src="https://github.com/user-attachments/assets/62e81356-e483-4fdd-8548-4d6499b252e9" alt="Ladybird Browser running natively on Windows 11" class="hero-image">
+    <img src="https://github.com/user-attachments/assets/62e81356-e483-4fdd-8548-4d6499b252e9" alt="Browser running natively on Windows 11" class="hero-image">
     
     <div class="warning">
-        <strong>⚠️ Warning:</strong> These are automated native Windows builds tracking the Ladybird `master` branch. As native Windows support is experimental, <strong>most builds are expected not to work or may crash.</strong>
+        <strong>⚠️ Warning:</strong> These are automated native Windows builds tracking the upstream `master` branch. As native Windows support is experimental, <strong>most builds are expected not to work or may crash.</strong>
     </div>
 
-    <!-- SEO Fallback: If Googlebot skips the JS, it still sees this direct link -->
     <noscript>
-        <p>JavaScript is disabled or you are a search crawler. You can <a href="https://github.com/Elwynsiaa/lb-win/releases">download the latest Ladybird Windows releases directly from our GitHub page here</a>.</p>
+        <p>JavaScript is disabled or you are a search crawler. You can <a href="https://github.com/Elwynsiaa/lb-win/releases">download the latest Windows releases directly from our GitHub page here</a>.</p>
     </noscript>
 
-    <div id="releases-container">Loading latest Ladybird Windows releases...</div>
+    <div id="releases-container">Loading latest Windows releases...</div>
 
-    <!-- SEO Content Section -->
     <div style="margin-top: 40px; border-top: 1px solid #30363d; padding-top: 20px;">
-        <h2>About Ladybird for Windows</h2>
+        <h2>About LB-Win</h2>
         <p>
-            <strong>Ladybird</strong> is a brand-new, independent web browser built from scratch in C++ and Rust. 
-            While official support is currently focused on Linux and macOS, this project automatically builds the 
-            experimental <strong>Ladybird native Windows port</strong> every week. 
+            <strong>LB-Win</strong> is an unofficial community project that automatically builds the experimental native Windows port of the <strong>Ladybird</strong> browser engine every week.
         </p>
-        <h3>How to install Ladybird on Windows:</h3>
+        <h3>How to install on Windows:</h3>
         <ol>
             <li>Download the latest <code>Ladybird-Windows-Release.zip</code> from the links above.</li>
             <li>Extract the entire folder to your Desktop or Downloads folder.</li>
@@ -81,12 +78,22 @@
         </ol>
     </div>
 
+    <!-- Trademark Disclaimer -->
+    <div class="disclaimer">
+        <h3>⚖️ Trademark & Disclaimer</h3>
+        <p><strong>LB-Win is an unofficial community project and is not affiliated with, endorsed by, or maintained by the Ladybird project or its core developers.</strong></p>
+        <ul>
+            <li>"Ladybird" is a trademark of the Ladybird project.</li>
+            <li>This website exists solely to provide experimental Windows compilation targets based on their open-source code.</li>
+            <li>Please <strong>do not</strong> submit bug reports to upstream regarding broken Windows builds unless you are actively contributing to native Windows support fixes.</li>
+        </ul>
+    </div>
+
     <script>
         const repo = 'Elwynsiaa/lb-win'; 
         const apiUrl = `https://api.github.com/repos/${repo}/releases`;
         const container = document.getElementById('releases-container');
 
-        // I updated this to highlight your recent successful 20261101 build!
         const knownWorkingBuildTag = "20261101"; 
 
         async function fetchReleases() {
