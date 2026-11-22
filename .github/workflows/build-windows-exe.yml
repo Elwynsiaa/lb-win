@@ -66,6 +66,14 @@ jobs:
           sccache_path: ${{ github.workspace }}/.sccache
           vcpkg_cache_path: ${{ github.workspace }}/Build/caches/vcpkg-binary-cache
 
+      - name: Patch Unused Variable Warnings
+        run: |
+          $file = "Libraries/LibWebView/CrashReport.cpp"
+          if (Test-Path $file) {
+              (Get-Content $file) -replace 'static DisableSandbox s_disable_sandbox', '[[maybe_unused]] static DisableSandbox s_disable_sandbox' | Set-Content $file
+          }
+        shell: pwsh
+
       - name: Configure CMake
         working-directory: ${{ github.workspace }}
         run: |
