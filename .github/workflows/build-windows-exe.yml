@@ -2,7 +2,7 @@ name: Build win32 (.exe)
 
 on:
   schedule:
-      - cron: '0 0 * * *'
+    - cron: '0 0 * * *'
   workflow_dispatch:
 
 env:
@@ -33,6 +33,18 @@ jobs:
         run: |
           $shortSha = git rev-parse --short HEAD
           echo "UPSTREAM_SHA=$shortSha" >> $env:GITHUB_ENV
+        shell: pwsh
+
+      - name: Install Latest LLVM 23 from GitHub
+        run: |
+          Write-Host "Downloading LLVM 23 installer..."
+          $url = "https://github.com/llvm/llvm-project/releases/download/llvmorg-23.1.6/LLVM-23.1.6-win64.msi"
+          Invoke-WebRequest -Uri $url -OutFile "llvm_installer.msi"
+          
+          Write-Host "Installing LLVM 23 silently..."
+          Start-Process -FilePath ".\llvm_installer.msi" -ArgumentList "/quiet" -Wait
+          
+          echo "C:\Program Files\LLVM\bin" >> $env:GITHUB_PATH
         shell: pwsh
 
       - name: Set Up Environment
@@ -143,7 +155,7 @@ jobs:
           tag_name: ${{ env.RELEASE_TAG }}
           name: ${{ env.RELEASE_NAME }}
           body: |
-            Automated weekly release built directly from upstream commit LadybirdBrowser/ladybird@${{ env.UPSTREAM_SHA }}.
+            Automated daily release built directly from upstream commit LadybirdBrowser/ladybird@${{ env.UPSTREAM_SHA }}.
           draft: false
           prerelease: false
           files: |
