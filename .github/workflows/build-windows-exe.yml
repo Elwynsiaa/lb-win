@@ -10,6 +10,7 @@ env:
   CCACHE_DIR: ${{ github.workspace }}/.ccache
   VCPKG_ROOT: ${{ github.workspace }}/Build/vcpkg-release
   CCACHE_COMPILERCHECK: "%compiler% -v"
+  RUSTFLAGS: "-C target-cpu=x86-64-v3"
 
 jobs:
   build-windows:
@@ -78,6 +79,10 @@ jobs:
           $file2 = "Services/Compositor/FontSkia.cpp"
           if (Test-Path $file2) {
               (Get-Content $file2) -replace 'static bool s_use_test_font_rendering', '[[maybe_unused]] static bool s_use_test_font_rendering' | Set-Content $file2
+          }
+
+          Get-ChildItem -Path "Meta/CMake" -Recurse -Filter "*.cmake" | ForEach-Object {
+              (Get-Content $_.FullName) -replace '-march=native', '-march=x86-64-v3' | Set-Content $_.FullName
           }
         shell: pwsh
 
