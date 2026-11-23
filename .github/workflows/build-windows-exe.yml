@@ -83,9 +83,13 @@ jobs:
 
       - name: Configure CMake
         working-directory: ${{ github.workspace }}
+        env:
+          RUSTFLAGS: "-C target-cpu=x86-64-v3"
         run: |
           cmake --preset Release -B Build `
             -DENABLE_CI_BASELINE_CPU=ON `
+            -DCMAKE_C_FLAGS="-march=x86-64-v3" `
+            -DCMAKE_CXX_FLAGS="-march=x86-64-v3" `
             -DENABLE_TESTS=OFF `
             -DBUILD_TESTING=OFF `
             -DENABLE_LAGOM_TESTS=OFF
