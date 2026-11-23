@@ -68,9 +68,16 @@ jobs:
 
       - name: Patch Unused Variable Warnings
         run: |
+          # 1. CrashReport.cpp
           $file = "Libraries/LibWebView/CrashReport.cpp"
           if (Test-Path $file) {
               (Get-Content $file) -replace 'static DisableSandbox s_disable_sandbox', '[[maybe_unused]] static DisableSandbox s_disable_sandbox' | Set-Content $file
+          }
+
+          # 2. FontSkia.cpp
+          $file2 = "Services/Compositor/FontSkia.cpp"
+          if (Test-Path $file2) {
+              (Get-Content $file2) -replace 'static bool s_use_test_font_rendering', '[[maybe_unused]] static bool s_use_test_font_rendering' | Set-Content $file2
           }
         shell: pwsh
 
